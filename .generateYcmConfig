@@ -1,0 +1,7 @@
+#!/bin/bash
+rm .ycm_extra_conf.py
+cd ../Debug
+/home/massimo/.vim/bundle/YCM-Generator/config_gen.py ./ -o ../network/.ycm_extra_conf.py --qt-version 5 -c /usr/bin/clang-3.8
+cd ../network
+echo "flags.append(\"-I../Debug\")" >> .ycm_extra_conf.py
+
